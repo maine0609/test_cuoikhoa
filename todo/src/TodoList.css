@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .Header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .navWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+  
+  .navWrapper button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .navWrapper button:hover {
+    text-decoration: underline;
+  }
+  
+  .navWrapper button.active {
+    border-bottom: 2px solid rgb(37, 0, 221);
+  }
+  
+  .inputWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  
+  .inputWrapper input {
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 75%;
+  }
+  
+  .inputWrapper button {
+    border: none;
+    background-color: rgb(37, 0, 221);
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20%;
+  }
+  
+  .inputWrapper button:hover {
+    background-color: rgb(37, 0, 221);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .deleteBtn {
+    border: none;
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .deleteallBtn,
+  .inputWrapper button {
+    border: none;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .deleteallBtn {
+    background-color: #f44336;
+  }
+  .deleteBtn:hover {
+    background-color: #d32f2f;
+  }
+  .taskList {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  .task input {
+    height: 2rem;
+  }
