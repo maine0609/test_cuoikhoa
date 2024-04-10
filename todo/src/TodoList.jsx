@@ -5,22 +5,25 @@ function TodoApp() {
   const [newTask, setNewTask] = useState("");
   const [filter, setFilter] = useState("all");
   const [showDeleteAll, setShowDeleteAll] = useState(false);
-  const [showInput, setShowInput] = useState(true); // State để điều chỉnh hiển thị input và nút "Add Task"
+  const [showInput, setShowInput] = useState(true); 
 
   useEffect(() => {
-    const storedTasks = JSON.parse(localStorage.getItem("tasks"));
-    if (storedTasks) {
-      setTasks(storedTasks);
+    const storedTasks = localStorage.getItem('tasks');
+    if (storedTasks !== null) { 
+      const parsedTasks = JSON.parse(storedTasks);
+      setTasks(parsedTasks);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    if (tasks.length > 0) {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
   }, [tasks]);
-
+  
   useEffect(() => {
     setShowDeleteAll(filter === "completed");
-    setShowInput(filter !== "completed"); // Ẩn input và nút "Add Task" khi filter là 'completed'
+    setShowInput(filter !== "completed"); 
   }, [filter]);
 
   const addTask = () => {
